@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  background-color: rgb(82, 118, 216);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+header input {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+header div {
+  display: flex;
+  gap: 15px;
+}
+
+header div button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+}
+
+header div button:nth-child(1) {
+  background-color: black;
+}
+
+header div button:nth-child(2) {
+  background-color: white;
+  color: black;
+}
+
+header div button:nth-child(3) {
+  background-color: black;
+}
+
+.category-wrapper {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  text-align: center;
+}
+
+.categories{
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+   
+}
+
+.category {
+  max-width: 120px;
+  min-width: 100px;
+  height: 150px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+
+  
+}
+
+.category img {
+  width: 100px;
+  border-radius: 10px;
+  object-fit:cover ;
+  cursor: pointer;
+  
+}
+
+.category span {
+  position: absolute;
+  bottom: 10px;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+
+.product-wrapper{
+    padding: 50px;
+    text-align: center;
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.product{
+    width: 200px;
+    height: 400px;
+    box-shadow: 1px 12px 19px 7px #0000004a;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+
+
+}
+
+.product img{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border: 3px solid gray;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+
+  
+
+.product p{
+  font-size: 14px;
+
+}
+.product-action{
+    display: flex;
+    background-color: rgb(94, 92, 92);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+.product-action button{
+    background-color: aqua;
+    color: rgb(25, 0, 255);
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    
+}
+.product-action button:active{
+  transform: scale(0.9);
+  background-color:  rgb(25, 0, 255);
+    color: aqua;
+}
+
+
+
+.modal-wrapper{
+  position: fixed;
+  background-color: rgba(128, 128, 128, 0.378);
+  z-index: 1000;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  display: none;
+  place-items: center;
+}
+
+
+.modal{
+  background-color: white;
+  width: 50%;
+  height: 60%;
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modal img{
+  width: 40px;
+  cursor: pointer;
+}
+
+.modal-list{
+display: flex;
+flex-direction: column;
+gap: 20px;
+overflow-y: auto;
+margin: 5px 10px;
+padding: 5px 10px;
+}
+.total{
+  text-align: center;
+}
+
+.active{
+display: grid;
+}
+
+.list-item{
+display: flex;
+align-items: center;
+justify-content: space-between;
+border:3px solid gray;
+width: 100%;
+gap: 15px;
+border-radius: 10px;
+padding: 10px;
+box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.56);
+}
+
+.list-item img{
+  width: 50px;
+  height: 50px;
+}
+
+.list-item .price{
+  color: red;
+}
+.list-item h4{
+  font-size: 15px;
+}
+
+.list-item p{
+  font-weight: 800;
+  font-size: 10px;
+}
+
+.delete-button{
+  background-color: orangered;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+#total-price{
+  color: rgb(25, 0, 255);
+  font-weight: 700;
+  
+  
+}
+.buy{
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(25, 0, 255);
+  color: white;
+  
+}
+.buy:active{
+  transform: scale(0.7);
+}
